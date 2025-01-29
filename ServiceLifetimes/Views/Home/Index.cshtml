@@ -1,0 +1,24 @@
+﻿@model OperationDTO;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Dotnet Service Lifetimes</h1>
+    
+    <h3>Scoped must be shared within the same requests</h3>
+    <p>@Model.scopedFirstId</p>
+    <p>@Model.scopedSecondId</p>
+
+    <h3>Transient must be different</h3>
+    <p>@Model.transcientFirstId</p>
+    <p>@Model.transcientSecondId</p>
+
+    <h3>Singleton must be the same, even in different browsers</h3>
+    <p> @Model.singletonFirstId</p>
+    <p>@Model.singletonSecondId</p>
+
+</div>
